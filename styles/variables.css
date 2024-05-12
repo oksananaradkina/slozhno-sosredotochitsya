@@ -1,4 +1,17 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+    --color-black: #000024;
+    --color-pink: #FF0070;
+    --color-pink-light: #F1B2CE;
+    --color-pink-light-2: #FF8DCB;
+    --color-pink-light-3: #FFEEF6;
+    --color-pink-light-4: #FFC2E6;
+    --color-violet: #DB00FF;
+    --color-gray-dark: #353430;
+    --color-gray-tpansporent-40:  rgba(50, 49, 45, 0.4);
+    --color-blue-dark: #00183F;
+    --color-pink-transporent-40: rgba(255, 0, 112, 0.4);
+
+    --image-cover-auto: url("/images/cover-image.png");
+    --image-cover-dark: url("/images/cover-image-dark.png");
+    --image-cover-light: url("/images/cover-image-light.png");
+}

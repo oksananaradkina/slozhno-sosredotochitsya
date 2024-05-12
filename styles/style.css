@@ -1,5 +1,538 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-text-color: var(--color-pink-light);
+        --main-background-color: var(--color-black);
+        --flag-rec-display: block;
+        --main-background-image: var(--image-cover-dark);
+        --title-background-color: var(--color-pink);
+        --text-shadow-color: var(--color-pink);
+        --footer-title-color: var(--color-violet);
+        --button-border-color: var(--color-pink);
+        --button-hover-border-color: var(--color-pink-transporent-40);
+        --title-section-color: var(--color-pink);
+        --main-description-color: var(--color-black);
+        --title-button-menu: var(--color-pink);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-text-color: var(--color-gray-dark);
+        --flag-rec-display: none;
+        --main-background-color: var(--color-pink-light-3);
+        --main-background-image: var(--image-cover-light);
+        --title-background-color: var(--color-pink-light-2);
+        --text-shadow-color: var(--color-pink);
+        --footer-title-color: var(--color-pink-light-4);
+        --button-border-color: var(--color-gray-dark);
+        --button-hover-border-color: var(--color-gray-tpansporent-40);
+        --title-section-color: var(--color-gray-dark);
+        --main-description-color: var(--color-black);
+        --title-button-menu: var(--color-gray-dark);
+    }
+}
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+    margin: 0 auto;
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+    font-family: 'IBM Plex mono', sans-serif;
+    position: relative;
+    /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: var(--main-background-image) no-repeat;
+    background-size: cover;
+    padding-bottom: 132px;
+    padding-top: 282px;
+}
+
+.main:after,
+.main:before {
+    content: " ";
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border: 0 solid var(--button-border-color);
+}
+
+.main:after {
+    left: 20px;
+    bottom: 20px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+}
+
+.main:before {
+    right: 20px;
+    top: 20px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+}
+
+.main__title {
+    font-size: 157px;
+    color: var(--footer-title-color);
+    text-shadow: 4px 4px var(--text-shadow-color);
+    align-self: start;
+}
+
+.main__description {
+    background-color: var(--title-background-color);
+    color: var(--color-black);
+    width: 491px;
+    margin: 77px 20px 0 0;
+    line-height: 1.5rem;
+    font-size: 18px;
+    align-self: end;
+}
+
+.header{
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+}
+
+.header__theme-menu-list {
+    display: flex;
+    column-gap: 14px;
+
+}
+
+.header__theme-menu-item {
+    display: block;
+}
+
+.header__theme-menu {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.inscription-rec {
+    display: var(--flag-rec-display);
+    position: absolute;
+    color: var(--color-pink);
+    text-transform: uppercase;
+    right: 50px;
+    top: 22px;
+}
+
+.inscription-rec:after {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    background-color: var(--color-pink);
+    box-shadow: 0 0 4px 2px var(--color-pink);
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    top: 6px;
+    left: 42px;
+}
+
+.header__theme-menu-button {
+    background-color: transparent;
+    border: none;
+    color: var(--title-button-menu);
+    padding: 2px 12px;
+    letter-spacing: 1px;
+}
+
+.header__theme-menu-button_active {
+    outline: 1px solid var(--button-border-color);
+    pointer-events: none;
+}
+
+.header__theme-menu-button:hover {
+    outline: 1px solid var(--button-hover-border-color);
+    cursor: pointer;
+}
+
+.header__theme-menu-button:focus {
+    border: none;
+    border-bottom: 1px solid var(--button-border-color);
+}
+
+.section-why {
+    display: flex;
+    column-gap: 12px;
+    margin-top: 58px;
+}
+
+.section-why .text-block__content {
+    padding-top: 10px;
+}
+
+.section.section-what {
+    padding-top: 62px;
+}
+
+.section-what .section__content {
+    display: flex;
+    column-gap: 20px;
+    padding-top: 20px;
+}
+
+.section-what .section__content .text-block {
+    flex: 1;
+}
+
+.section-what .section__title {
+    width: 30%;
+}
+
+.section {
+    padding: 0 20px;
+}
+
+.section__title {
+    color: var(--title-section-color);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.section-how {
+    display: flex;
+    column-gap: 14px;
+    padding-top: 78px;
+}
+
+.section-how .text-block__title {
+    font-weight: normal;
+}
+
+.section-how .section-title {
+    flex: 1;
+}
+
+.section-how .section-content {
+    flex: 2;
+}
+
+.section-how .section__title {
+    flex: 1;
+}
+
+.section-how .section__content {
+    flex: 2;
+}
+
+.section-how .text-block .text-block__title {
+    margin-top: 19px;
+    font-size: 18px;
+    line-height: 1.5rem;
+    letter-spacing: 0;
+}
+
+.section-how .section__content .color-title {
+    font-size: 18px;
+}
+
+.color-title {
+    background-color: var(--title-background-color);
+    color: var(--main-description-color);
+}
+
+.text-block__title {
+    font-weight: bold;
+}
+
+.section-why .text-block,
+.section-how .text-block {
+    margin-bottom: 18px;
+}
+
+.section-why .section__title {
+    flex: 1;
+}
+
+.section-why .section__content {
+    flex: 2;
+}
+
+.section-mosaic {
+    margin: 60px auto 0;
+}
+
+.section-mosaic .color-title {
+    font-size: 18px;
+}
+
+.grid_mosaic {
+    grid-auto-flow: dense;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: 260px 315px 428px;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+
+.grid_mosaic .wide {
+    grid-column: span 2;
+}
+
+.grid_mosaic .tall {
+    grid-row: span 2;
+}
+
+.grid_mosaic__item {
+    height: 100%;
+    width: 100%;
+    margin-top: 46px;
+}
+
+.grid_mosaic .mosaic-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 768px;
+    position: relative;
+    margin-top: 85px;
+}
+
+.footer__title {
+    text-align: center;
+    font-size: 157px;
+    color: var(--footer-title-color);
+    text-shadow: 2px 2px var(--text-shadow-color);
+}
+
+.footer__title:after,
+.footer__title:before {
+    content: " ";
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border: 0 solid var(--button-border-color);
+}
+
+.footer__title:after {
+    left: 20px;
+    bottom: 20px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+}
+
+.footer__title:before {
+    right: 20px;
+    top: 20px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+}
+
+.text-block__content {
+    letter-spacing: 1.2px;
+    padding-top: 10px;
+    line-height: 1.47rem;
+}
+
+.text-block__title {
+    letter-spacing: -0.4px;
+}
+
+.link {
+    display: inline-block;
+    text-decoration: none;
+    text-shadow: 2px 2px var(--text-shadow-color);
+    padding: 0 2px;
+    line-height: 1px;
+}
+
+.link:hover {
+   text-decoration: underline;
+}
+
+.link:focus {
+    outline: none;
+}
+
+.link:focus-visible{
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .page {
+        width: 100%;
+    }
+
+    .header{
+        right: 20px;
+    }
+
+    .main {
+        padding-top: 432px;
+        padding-bottom: 182px;
+    }
+
+    .main__title {
+        font-size: 120px;
+    }
+
+    .main__description {
+        width: 364px;
+    }
+
+    .section-what .section__content {
+        flex-direction: column;
+    }
+
+    .footer__title {
+        font-size: 120px;
+    }
+
+    .header__theme-menu-list {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .header__theme-menu {
+        justify-content: right;
+        align-items: end;
+        height: 286px;
+    }
+
+    .main {
+        padding-right: 20px;
+    }
+
+    .main__description {
+        margin: 134px 0px 0 0;
+    }
+
+    .section-why {
+        column-gap: 20px;
+    }
+
+    .section-what .section__content {
+        row-gap: 18px;
+    }
+
+    .section-how {
+        column-gap: 22px;
+    }
+
+    .grid_mosaic {
+        grid-template-rows: 192px 230px 318px;
+    }
+
+    .footer {
+        margin-top: 82px;
+        height: 1024px;
+    }
+}
+
+@media (max-width: 375px) {
+    .main:before {
+        right: 10px;
+        top: 10px
+    }
+
+    .main:after {
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .header{
+        right: 10px;
+    }
+
+    .header__theme-menu {
+        height: 169px;
+    }
+
+    .main {
+        padding: 240px 10px 0 10px;
+    }
+
+    .main__title {
+        line-height: 0.82em;
+        font-size: 116px;
+    }
+
+    .inscription-rec {
+        right: 41px;
+        top: 12px;
+    }
+
+    .main__description {
+        margin: 56px 0 0 4px;
+        width: 100%;
+    }
+
+    .main {
+        padding-bottom: 64px;
+    }
+
+    .section-why {
+        flex-direction: column;
+        margin-top: 39px;
+    }
+
+    .section {
+        padding: 0 10px;
+    }
+
+    .section-why .section__content {
+        padding-top: 20px;
+    }
+
+    .section-what .section__title {
+        width: 100%;
+    }
+
+    .section.section-what {
+        padding-top: 30px;
+    }
+
+    .section-how {
+        flex-direction: column;
+        padding-top: 49px;
+    }
+
+    .section-how .section__content {
+        padding-top: 20px;
+    }
+
+    .section-mosaic {
+        margin-top: 30px;
+    }
+
+    .grid_mosaic {
+        display: block;
+        margin-top: 9px;
+    }
+
+    .grid_mosaic__item {
+        margin: 0 0 6px 0;
+    }
+
+    .footer {
+        margin-top: 28px;
+        height: 690px;
+    }
+
+    .footer__title:before {
+        right: 10px;
+    }
+
+    .footer__title:after {
+        bottom: 10px;
+        left: 10px;
+    }
 }
