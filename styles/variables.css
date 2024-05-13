@@ -11,7 +11,7 @@
     --color-blue-dark: #00183F;
     --color-pink-transporent-40: rgba(255, 0, 112, 0.4);
 
-    --image-cover-auto: url("/images/cover-image.png");
-    --image-cover-dark: url("/images/cover-image-dark.png");
-    --image-cover-light: url("/images/cover-image-light.png");
+    --image-cover-auto: url("images/cover-image.png");
+    --image-cover-dark: url("images/cover-image-dark.png");
+    --image-cover-light: url("images/cover-image-light.png");
 }

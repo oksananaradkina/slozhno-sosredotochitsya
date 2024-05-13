@@ -3,6 +3,22 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-text-color: var(--color-gray-dark);
+        --flag-rec-display: none;
+        --main-background-color: var(--color-pink-light-3);
+        --main-background-image: var(--image-cover-light);
+        --title-background-color: var(--color-pink-light-2);
+        --text-shadow-color: var(--color-pink);
+        --footer-title-color: var(--color-pink-light-4);
+        --button-border-color: var(--color-gray-dark);
+        --button-hover-border-color: var(--color-gray-tpansporent-40);
+        --title-section-color: var(--color-gray-dark);
+        --main-description-color: var(--color-black);
+        --title-button-menu: var(--color-gray-dark);
+    }
+}
 
 .page.theme_light {
     --main-text-color: var(--color-gray-dark);
