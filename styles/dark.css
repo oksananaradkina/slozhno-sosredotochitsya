@@ -13,6 +13,7 @@
         --text-shadow-color: var(--color-pink);
         --footer-title-color: var(--color-violet);
         --button-border-color: var(--color-pink);
+        --link-border-color: var(--color-pink-light-2);
         --button-hover-border-color: var(--color-pink-transporent-40);
         --title-section-color: var(--color-pink);
         --main-description-color: var(--color-black);
@@ -29,6 +30,7 @@
     --text-shadow-color: var(--color-pink);
     --footer-title-color: var(--color-violet);
     --button-border-color: var(--color-pink);
+    --link-border-color: var(--color-pink-light-2);
     --button-hover-border-color: var(--color-pink-transporent-40);
     --title-section-color: var(--color-pink);
     --main-description-color: var(--color-black);
