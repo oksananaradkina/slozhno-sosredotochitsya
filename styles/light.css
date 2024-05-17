@@ -10,7 +10,7 @@
         --main-background-color: var(--color-pink-light-3);
         --main-background-image: var(--image-cover-light);
         --title-background-color: var(--color-pink-light-2);
-        --text-shadow-color: var(--color-pink-light-2);
+        --text-shadow-color: var(--color-pink-light);
         --footer-title-color: var(--color-pink-light-4);
         --button-border-color: var(--color-gray-dark);
         --button-hover-border-color: var(--color-gray-tpansporent-40);
@@ -27,7 +27,7 @@
     --main-background-color: var(--color-pink-light-3);
     --main-background-image: var(--image-cover-light);
     --title-background-color: var(--color-pink-light-2);
-    --text-shadow-color: var(--color-pink);
+    --text-shadow-color: var(--color-pink-light);
     --footer-title-color: var(--color-pink-light-4);
     --button-border-color: var(--color-gray-dark);
     --button-hover-border-color: var(--color-gray-tpansporent-40);

@@ -46,11 +46,13 @@
 
 .header__title {
     text-shadow: 4px 4px var(--text-shadow-color);
+    margin-top: 26px;
+    letter-spacing: -1px;
 }
 
 .header__title,
 .footer__title {
-    font-size: clamp(6.5em, 15.6vw, 8.8em);
+    font-size: clamp(6.5em, 15.8vw, 8.8em);
     color: var(--footer-title-color);
 }
 
@@ -63,6 +65,7 @@
     justify-self: end;
     align-self: center;
     font-weight: 700;
+    margin-top: -14px;
 }
 
 .header {
@@ -80,7 +83,7 @@
 
 .header__theme-menu-list {
     display: flex;
-    column-gap: 14px;
+    column-gap: 12px;
 
 }
 
@@ -91,6 +94,7 @@
 .header__theme-menu {
     display: flex;
     justify-content: center;
+    padding-left: 20px;
 }
 
 .inscription-rec {
@@ -120,6 +124,7 @@
     border: none;
     color: var(--title-button-menu);
     padding: 2px 12px;
+    line-height: 20px;
 }
 
 .header__theme-menu-button_active {
@@ -228,14 +233,13 @@
 .grid_mosaic {
     grid-auto-flow: dense;
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 22px;
     grid-template-rows: 260px 315px 428px;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-items: center;
     margin-top: 20px;
 }
-
 
 .grid_mosaic .wide {
     grid-column: span 2;
@@ -261,7 +265,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-top: 40px;
+    margin-top: 42px;
 }
 
 .footer__title {
@@ -281,7 +285,7 @@
 .link {
     display: inline-block;
     text-decoration: none;
-    text-shadow: 1px 1px var(--text-shadow-color);
+    text-shadow: 2px 2px var(--text-shadow-color);
     padding: 0 2px;
     line-height: 16px;
 }
@@ -295,8 +299,7 @@
 }
 
 .link:focus-visible {
-    text-decoration: underline;
-    outline: none;
+    outline: 1px solid var(--link-border-color);
 }
 
 @media (max-width: 768px) {
@@ -305,21 +308,23 @@
     }
 
     .header {
-        padding: 45px 20px 45px 0;
+        padding: 20px 20px 45px 0;
     }
 
     .header__theme-menu-list {
         flex-direction: column;
-        row-gap: 10px;
+        row-gap: 12px;
     }
 
     .header__theme-menu {
         justify-content: right;
         align-items: center;
+        padding-top: 52px;
     }
 
     .header__description {
-        max-width: 365px;
+        max-width: 364px;
+        margin-top: 0;
     }
 
     .section-what .section__content {
@@ -353,15 +358,21 @@
 
     .header__title {
         line-height: 0.82em;
+        margin-top: 6px;
     }
 
-    .header__description{
+    .header__theme-menu{
+        padding-top: 10px;
+    }
+
+    .header__description {
         width: 100%;
+        margin-top: -10px;
     }
 
     .inscription-rec {
-        right: 41px;
-        top: 12px;
+        right: 38px;
+        top: 10px;
     }
 
     .section-why {
@@ -408,7 +419,7 @@
         margin-bottom: 6px;
     }
 
-    .footer{
+    .footer {
         margin-top: 32px;
     }
 
